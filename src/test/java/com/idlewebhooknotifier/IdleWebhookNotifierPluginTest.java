@@ -1,13 +1,13 @@
-package com.example;
+package com.idlewebhooknotifier;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class IdleWebhookNotifierPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(IdleWebhookNotifierPlugin.class);
 		RuneLite.main(args);
 	}
 }

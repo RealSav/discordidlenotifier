@@ -2,6 +2,12 @@ plugins {
 	id 'java'
 }
 
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(11)
+	}
+}
+
 repositories {
 	mavenLocal()
 	maven {
@@ -14,7 +20,7 @@ repositories {
 }
 
 def runeLiteVersion = 'latest.release'
-def pluginMainClass = 'com.example.ExamplePluginTest'
+def pluginMainClass = 'com.idlewebhooknotifier.IdleWebhookNotifierPluginTest'
 
 dependencies {
 	compileOnly group: 'net.runelite', name:'client', version: runeLiteVersion
@@ -27,7 +33,7 @@ dependencies {
 	testImplementation group: 'net.runelite', name:'jshell', version: runeLiteVersion
 }
 
-group = 'com.example'
+group = 'com.idlewebhooknotifier'
 
 tasks.withType(JavaCompile).configureEach {
 	options.encoding = 'UTF-8'
